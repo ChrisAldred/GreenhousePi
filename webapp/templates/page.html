@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Greenhouse</title>
+		<link rel="stylesheet" href='../static/style.css' />
+	</head>
+	<body>
+		<h1>
+			GREENHOUSE
+		</h1>
+		<a id="ln01" href="https://www.rhs.org.uk/advice">
+			<img class="center" src="https://www.harrodhorticultural.com/cache/product/1230/1230/additional-exterior-greenhouse-blinds-1-2019125101.jpg" alt="pic not available" usemap="#workmap">
+		</a>
+		
+		<table id="t01">
+		  <tr>
+		  	<th>Date</th>
+		  	<th>Time</th>
+		  	<th>Plant 1</th>
+		  	<th>Plant 2</th>
+		  	<th>Plant 3</th>
+		  	<th>Plant 4</th>
+		  	<th>Plant 5</th>
+		    <th>Temp In</th>
+		    <th>Temp Out</th>
+		    <th>Lux</th>
+		  </tr>
+		  {% for row in rows %}
+		  <tr>
+		    <td>{{ row["date"] }}</td>
+		    <td>{{ row["time"] }}</td>
+		    <td>{{ row["plant1"] }}</td>
+		    <td>{{ row["plant2"] }}</td>
+		    <td>{{ row["plant3"] }}</td>
+		    <td>{{ row["plant4"] }}</td>
+		    <td>{{ row["plant5"] }}</td>
+		    <td>{{ row["tempIn"] }}</td>
+		    <td>{{ row["tempOut"] }}</td>
+		    <td>{{ row["lux"] }}</td>
+		  </tr>
+		  {% endfor %}
+		</table>
+		<img src="/plot/temp" alt="Image Placeholder">
+	</body>
+</html>
